@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION format_seconds(seconds BIGINT)
+CREATE OR REPLACE FUNCTION format_seconds(seconds NUMERIC)
 RETURNS TEXT AS $$
 DECLARE
 	hours INTEGER;
