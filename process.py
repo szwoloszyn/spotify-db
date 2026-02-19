@@ -1,9 +1,7 @@
 import pandas as pd
 import json
-from pprint import pprint
 from pathlib import Path
 import statistics
-
 
 ### USERNAME !
 username = 'dhoz'
