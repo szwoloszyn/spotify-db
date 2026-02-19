@@ -83,7 +83,7 @@ GROUP BY t.title, t.album, t.duration
 ORDER BY t.album, COUNT(s.streamID)
 
 
--- users count of streams grouped by song of Nirvana group
+-- users count of streams grouped by songs of Nirvana group
 SELECT  title, album, COUNT(streamID) FROM dhozall
 WHERE artist = 'Nirvana'
 GROUP BY title, album
@@ -93,7 +93,7 @@ ORDER BY count(streamID) DESC
 -- codys top songs in 2026 vs dhozs top songs in 2026
 (
     SELECT 
-        'cody' AS username,       -- Tag the rows!
+        'cody' AS username,
         t.title, 
         t.artist, 
         COUNT(s.streamID) as plays
@@ -106,10 +106,10 @@ ORDER BY count(streamID) DESC
     ORDER BY plays DESC
     LIMIT 10
 )
-UNION ALL  -- Use ALL to keep duplicates (if both have same song/count) and it's faster
+UNION ALL
 (
     SELECT 
-        'dhoz' AS username,       -- Tag the rows!
+        'dhoz' AS username,
         t.title, 
         t.artist,
         COUNT(s.streamID) as plays
