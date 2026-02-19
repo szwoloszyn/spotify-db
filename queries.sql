@@ -54,7 +54,7 @@ ORDER BY COUNT(s.streamID) DESC
 -- most frequently played songs on specified OS
 SELECT s.platform, t.title, t.artist, COUNT(*) FROM streams s
 JOIN tracks t USING(trackID)
-WHERE s.platform = 'linux'
+WHERE s.platform = 'android'
 AND s.username = 'cody'
 GROUP BY t.title, t.artist, s.platform
 ORDER BY COUNT(*) DESC, platform ASC
