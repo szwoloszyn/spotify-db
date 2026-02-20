@@ -3,10 +3,10 @@
 ## Table of contents
 - [What is it](#what-is-it)
 - [Database Structure](#database-structure)
-- [How To Possess Your Streaming History](#how-to-possess-data)
+- [How To Possess Your Streaming History](#how-to-possess-your-streaming-history)
 - [Loading Data](#loading-data)
-- [Detailed Description of Each File](#each-file)
-- [Potential Problems With Data](#beware-problems)
+- [Detailed Description of Each File](#detailed-description-of-each-file)
+- [Potential Problems With Data](#potential-problems-with-data)
 
 
 ## What is it
