@@ -52,10 +52,19 @@ Then, run the script and expect two `tracks_{username},csv` and `streams_{userna
 
 The data is clean and ready to go.
 
+Lastly, you need to create `PostgreSQL` database. In order to finish the setup, run [`init.sql`](./init.sql) file. Tables described in previous section will be created.
+[`import-user-streams.sql`](./load-user-streams.sql) file contains function definition which allows easy inserting new users' data to the database. File [`load-users.sql`](./load-users.sql) demonstrates example: inserting two users and creates views for each user that makes querying much easier. You can find example queries in [`queries.sql`](./queries.sql) file.
+
 ```
 TODO:
-how to input into database.
 detailed descxription of each file
 problems with spotify data - doubles and song duration.
 ```
 
+## Detailed Description of Each File
+
+- [`process.py`](./process.py) - transforms raw `.json` file obtained from spotify into db-readable `.csv` files.
+
+- `init.sql` - creates database schema.
+
+- `
