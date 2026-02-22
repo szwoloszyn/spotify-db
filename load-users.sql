@@ -1,5 +1,9 @@
+TRUNCATE TABLE streams;
+TRUNCATE TABLE tracks CASCADE;
+
 SELECT import_user_streams('cody', '/tmp/tracks_cody.csv', '/tmp/streams_cody.csv');
 SELECT import_user_streams('dhoz', '/tmp/tracks_dhoz.csv', '/tmp/streams_dhoz.csv');
+SELECT import_user_streams('yoda', '/tmp/tracks_yoda.csv', '/tmp/streams_yoda.csv');
 
 CREATE OR REPLACE VIEW codyall AS
 SELECT 
@@ -15,6 +19,13 @@ SELECT
 FROM streams s
 JOIN tracks t USING (trackID)
 WHERE s.username = 'dhoz';
+
+CREATE OR REPLACE VIEW yodaall AS
+SELECT 
+	*
+FROM streams s
+JOIN tracks t USING (trackID)
+WHERE s.username = 'yoda';
 
 	-- s.streamID,
  --    s.endtime,

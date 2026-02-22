@@ -1,4 +1,3 @@
-
 DROP TABLE IF EXISTS streams;
 DROP TABLE IF EXISTS tracks;
 DROP TYPE IF EXISTS OS;
@@ -33,11 +32,9 @@ CREATE TABLE streams (
 
 ALTER TABLE streams ADD COLUMN username VARCHAR(15) NOT NULL; -- DEFAULT 'cody';
 
-
-
--- ALTER TABLE streams
--- ADD CONSTRAINT unique_stream_per_user 
--- UNIQUE (endtime, username);
+ALTER TABLE streams
+ADD CONSTRAINT unique_stream_per_user 
+UNIQUE (endtime, username);
 
 -- COPY tracks(trackID, title, artist, album, duration)
 -- FROM '/tmp/tracks_cody.csv'
